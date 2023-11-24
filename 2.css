@@ -1,0 +1,44 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ccc;
+    background-color: #fff;
+}
+
+header img {
+    width: 150px;
+}
+
+.applicant-profile {
+    padding: 20px;
+    background-color: #fff;
+    margin: 20px;
+    border: 1px solid #ccc;
+}
+
+.section {
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #ccc;
+}
+
+table th, table td {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+}
