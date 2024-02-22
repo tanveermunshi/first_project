@@ -1,33 +1,114 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Personal Website</title>
-    <!-- Add link to CSS file here (if any) -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Customer Information Form</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        label {
+            font-weight: bold; /* Make all labels bold */
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>Your Name</h1>
-        <p>Your Tagline</p>
-    </header>
-    <main>
-        <section class="bio">
-            <img src="your-image.jpg" alt="Your Photo">
-            <p>Your brief introduction or biography here.</p>
-        </section>
-        <section class="social-media">
-            <a href="your-instagram-link" target="_blank"><img src="instagram-icon.png" alt="Instagram"></a>
-            <a href="your-linkedin-link" target="_blank"><img src="linkedin-icon.png" alt="LinkedIn"></a>
-        </section>
-        <section class="comment-section">
-            <form action="submit-comment-url" method="post">
-                <label for="comment">Leave a Comment:</label>
-                <textarea id="comment" name="comment"></textarea>
-                <button type="submit">Post Comment</button>
+
+<div class="container mt-5">
+    <h2 class="mb-4">Customer Information Form</h2>
+    
+    <!-- Tab Navigation -->
+    <ul class="nav nav-tabs" id="infoTab" role="tablist">
+        <li class="nav-item">
+            <a class="nav-link active" id="personal-tab" data-toggle="tab" href="#personal" role="tab" aria-controls="personal" aria-selected="true">Personal Details</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="account-tab" data-toggle="tab" href="#account" role="tab" aria-controls="account" aria-selected="false">Account Information</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="spouse-tab" data-toggle="tab" href="#spouse" role="tab" aria-controls="spouse" aria-selected="false">Spouse Information</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="company-tab" data-toggle="tab" href="#company" role="tab" aria-controls="company" aria-selected="false">Company Information</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="communication-tab" data-toggle="tab" href="#communication" role="tab" aria-controls="communication" aria-selected="false">Communication and Social Media</a>
+        </li>
+    </ul>
+
+    <!-- Tab Content -->
+    <div class="tab-content" id="infoTabContent">
+        <!-- Personal Details Tab -->
+        <div class="tab-pane fade show active" id="personal" role="tabpanel" aria-labelledby="personal-tab">
+            <form action="submit-personal-info-url" method="post" class="p-3">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="customerFirstName">First Name</label>
+                            <input type="text" class="form-control" id="customerFirstName" name="customerFirstName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="customerEmail">Email Address</label>
+                            <input type="email" class="form-control" id="customerEmail" name="customerEmail" required>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="customerLastName">Last Name</label>
+                            <input type="text" class="form-control" id="customerLastName" name="customerLastName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="customerPhone">Phone Number</label>
+                            <input type="tel" class="form-control" id="customerPhone" name="customerPhone" required>
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit Personal Details</button>
             </form>
-        </section>
-    </main>
-    <footer>
-        <p>Contact information and copyright notice.</p>
-    </footer>
+        </div>
+
+        <!-- Account Information Tab -->
+        <div class="tab-pane fade" id="account" role="tabpanel" aria-labelledby="account-tab">
+            <form action="submit-account-info-url" method="post" class="p-3">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="customerAccountType">Account Type</label>
+                            <select class="form-control" id="customerAccountType" name="customerAccountType">
+                                <option>Savings</option>
+                                <option>Checking</option>
+                                <option>Investment</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="customerBranch">Branch</label>
+                            <input type="text" class="form-control" id="customerBranch" name="customerBranch" required>
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit Account Information</button>
+            </form>
+        </div>
+
+        <!-- Additional Tabs -->
+        <!-- Spouse Information Tab -->
+        <div class="tab-pane fade" id="spouse" role="tabpanel" aria-labelledby="spouse-tab">
+            <!-- Spouse Information Form Content Here -->
+        </div>
+        <!-- Company Information Tab -->
+        <div class="tab-pane fade" id="company" role="tabpanel" aria-labelledby="company-tab">
+            <!-- Company Information Form Content Here -->
+        </div>
+        <!-- Communication and Social Media Tab -->
+        <div class="tab-pane fade" id="communication" role="tabpanel" aria-labelledby="communication-tab">
+            <!-- Communication and Social Media Form Content Here -->
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
